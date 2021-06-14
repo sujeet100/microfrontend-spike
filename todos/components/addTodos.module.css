@@ -1,5 +1,6 @@
 .addTodo {
     padding: 16px;
+    margin-top: 3rem;
 }
 .addTodo input {
     border: 1px solid #eaeaea;
