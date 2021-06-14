@@ -1,4 +1,4 @@
-import { Args, Int, Query, Resolver } from '@nestjs/graphql';
+import {Args, Int, Mutation, Query, Resolver} from '@nestjs/graphql';
 import { Todo } from './models/todo.model';
 import { TodosService } from './todos.service';
 
@@ -14,5 +14,10 @@ export class TodosResolver {
   @Query(returns => Todo)
   async todo(@Args('id', { type: () => Int }) id: number) {
     return this.todosService.getTodo(id);
+  }
+
+  @Mutation(returns => Todo)
+  async addTodo(@Args('addTodoInput') todoDescription: string) {
+    return this.todosService.addTodo(todoDescription);
   }
 }

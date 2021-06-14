@@ -28,8 +28,7 @@ export default function Layout({ children, home }) {
             <header className={styles.header}>
                 <Image
                     priority
-                    src="/images/profile.jpg"
-                    className={utilStyles.borderCircle}
+                    src="/images/todo.png"
                     height={144}
                     width={144}
                     alt={name}

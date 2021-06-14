@@ -13,4 +13,8 @@ export class TodosService {
   async getTodo(id: number): Promise<Todo> {
     return await this.todosRepository.findOne({where: {id: id}});
   }
+
+  async addTodo(todoDescription: string) {
+    return await this.todosRepository.save({description: todoDescription, status: false});
+  }
 }
