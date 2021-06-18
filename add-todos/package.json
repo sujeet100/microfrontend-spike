@@ -3,13 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3002",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "@module-federation/nextjs-mf": "^1.1.2",
+    "@reduxjs/toolkit": "^1.6.0",
     "next": "10.2.3",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-redux": "^7.2.4"
+  },
+  "resolutions": {
+    "webpack": "5.27.2"
   }
 }

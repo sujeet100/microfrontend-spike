@@ -6,6 +6,7 @@ import Link from 'next/link'
 
 const name = 'Simple Todo'
 export const siteTitle = 'Next.js Sample Website'
+const SiteHeader = (await import("addTodo/SiteHeader")).default;
 
 export default function Layout({ children, home }) {
     return (
@@ -25,16 +26,7 @@ export default function Layout({ children, home }) {
                 <meta name="og:title" content={siteTitle} />
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
-            <header className={styles.header}>
-                <Image
-                    priority
-                    src="/images/todo.png"
-                    height={144}
-                    width={144}
-                    alt={name}
-                />
-                <h1 className={utilStyles.heading2Xl}>{name}</h1>
-            </header>
+            <SiteHeader/>
             <main>{children}</main>
             {!home && (
                 <div className={styles.backToHome}>
